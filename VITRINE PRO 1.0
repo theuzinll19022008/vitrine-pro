@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Vitrine Pro</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Arial,sans-serif;
+background:#0b0b0b;
+color:white;
+}
+
+/* HEADER */
+
+header{
+padding:20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+max-width:1100px;
+margin:auto;
+}
+
+.logo{
+font-size:24px;
+font-weight:bold;
+}
+
+.logo span{
+color:#7c5cff;
+}
+
+.menu a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+font-size:14px;
+}
+
+/* HERO */
+
+.hero{
+text-align:center;
+padding:90px 20px;
+background:
+linear-gradient(180deg,#171326,#0b0b0b);
+}
+
+.hero h1{
+font-size:48px;
+max-width:800px;
+margin:auto;
+line-height:1.1;
+}
+
+.hero h1 span{
+color:#7c5cff;
+}
+
+.hero p{
+max-width:650px;
+margin:20px auto;
+color:#aaa;
+font-size:18px;
+line-height:1.6;
+}
+
+.botao{
+display:inline-block;
+margin-top:20px;
+padding:16px 28px;
+background:#7c5cff;
+color:white;
+text-decoration:none;
+border-radius:10px;
+font-weight:bold;
+}
+
+/* SEÇÕES */
+
+section{
+max-width:1100px;
+margin:auto;
+padding:70px 20px;
+}
+
+.titulo{
+text-align:center;
+margin-bottom:40px;
+}
+
+.titulo h2{
+font-size:32px;
+}
+
+.titulo p{
+color:#999;
+margin-top:10px;
+}
+
+/* CATEGORIAS */
+
+.categorias{
+display:flex;
+gap:12px;
+justify-content:center;
+flex-wrap:wrap;
+margin-bottom:35px;
+}
+
+.categoria{
+background:#171717;
+border:1px solid #292929;
+padding:12px 18px;
+border-radius:30px;
+}
+
+/* PRODUTOS */
+
+.produtos{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+}
+
+.produto{
+background:#161616;
+border:1px solid #292929;
+border-radius:16px;
+overflow:hidden;
+transition:.3s;
+}
+
+.produto:hover{
+transform:translateY(-5px);
+}
+
+.foto{
+height:190px;
+background:#252525;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:55px;
+}
+
+.conteudo{
+padding:20px;
+}
+
+.conteudo h3{
+font-size:21px;
+margin-bottom:8px;
+}
+
+.conteudo p{
+color:#999;
+font-size:14px;
+line-height:1.5;
+}
+
+.preco{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-top:18px;
+}
+
+.preco strong{
+color:#7c5cff;
+font-size:19px;
+}
+
+.pedir{
+background:#7c5cff;
+color:white;
+padding:9px 13px;
+border-radius:8px;
+text-decoration:none;
+font-size:13px;
+font-weight:bold;
+}
+
+/* SERVIÇOS */
+
+.servicos{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+}
+
+.servico{
+background:#161616;
+border:1px solid #292929;
+padding:25px;
+border-radius:15px;
+}
+
+.servico h3{
+margin:15px 0 8px;
+}
+
+.servico p{
+color:#999;
+line-height:1.5;
+font-size:14px;
+}
+
+/* BENEFÍCIOS */
+
+.beneficios{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:15px;
+}
+
+.beneficio{
+background:#161616;
+padding:25px;
+border-radius:15px;
+text-align:center;
+}
+
+.beneficio h3{
+margin:12px 0 8px;
+font-size:17px;
+}
+
+.beneficio p{
+color:#999;
+font-size:13px;
+line-height:1.5;
+}
+
+/* SOBRE */
+
+.sobre{
+background:#121212;
+max-width:100%;
+}
+
+.sobre-conteudo{
+max-width:900px;
+margin:auto;
+text-align:center;
+}
+
+.sobre p{
+color:#aaa;
+line-height:1.7;
+margin-top:15px;
+}
+
+/* CTA */
+
+.cta{
+text-align:center;
+padding:80px 20px;
+background:#171326;
+}
+
+.cta h2{
+font-size:34px;
+}
+
+.cta p{
+color:#aaa;
+margin:15px auto;
+max-width:600px;
+line-height:1.6;
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:35px 20px;
+background:#050505;
+border-top:1px solid #222;
+}
+
+footer p{
+color:#777;
+font-size:13px;
+margin-top:8px;
+}
+
+/* CELULAR */
+
+@media(max-width:800px){
+
+.hero h1{
+font-size:36px;
+}
+
+.menu{
+display:none;
+}
+
+.produtos{
+grid-template-columns:1fr;
+}
+
+.servicos{
+grid-template-columns:1fr;
+}
+
+.beneficios{
+grid-template-columns:1fr 1fr;
+}
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<div class="logo">
+Vitrine <span>Pro</span>
+</div>
+
+<div class="menu">
+
+<a href="#produtos">
+Produtos
+</a>
+
+<a href="#servicos">
+Serviços
+</a>
+
+<a href="#contato">
+Contato
+</a>
+
+</div>
+
+</header>
+
+
+<section class="hero">
+
+<h1>
+
+Seu negócio merece uma
+<span>vitrine profissional.</span>
+
+</h1>
+
+<p>
+
+Apresente seus produtos e serviços,
+facilite o contato com seus clientes
+e tenha uma presença profissional na internet.
+
+</p>
+
+<a
+class="botao"
+href="#contato">
+
+QUERO MEU SITE 🚀
+
+</a>
+
+</section>
+
+
+<section>
+
+
+<div class="titulo">
+
+<h2>Exemplos de produtos</h2>
+
+<p>
+
+Um site pode ser personalizado
+para diferentes tipos de negócios.
+
+</p>
+
+</div>
+
+
+<div class="categorias">
+
+<div class="categoria">
+👕 Moda
+</div>
+
+<div class="categoria">
+👟 Calçados
+</div>
+
+<div class="categoria">
+🍰 Alimentação
+</div>
+
+<div class="categoria">
+💄 Beleza
+</div>
+
+<div class="categoria">
+💈 Serviços
+</div>
+
+<div class="categoria">
+🚗 Automotivo
+</div>
+
+</div>
+
+
+<div
+class="produtos"
+id="produtos">
+
+
+<div class="produto">
+
+<div class="foto">
+👕
+</div>
+
+<div class="conteudo">
+
+<h3>
+Camiseta Premium
+</h3>
+
+<p>
+Camiseta confortável
+com acabamento de qualidade.
+</p>
+
+<div class="preco">
+
+<strong>
+R$ 79,90
+</strong>
+
+<a
+class="pedir"
+href="#contato">
+
+Ver produto
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="produto">
+
+<div class="foto">
+👟
+</div>
+
+<div class="conteudo">
+
+<h3>
+Tênis Urban
+</h3>
+
+<p>
+Modelo moderno para
+combinar com qualquer estilo.
+</p>
+
+<div class="preco">
+
+<strong>
+R$ 149,90
+</strong>
+
+<a
+class="pedir"
+href="#contato">
+
+Ver produto
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="produto">
+
+<div class="foto">
+🍰
+</div>
+
+<div class="conteudo">
+
+<h3>
+Bolo Especial
+</h3>
+
+<p>
+Bolo artesanal preparado
+para momentos especiais.
+</p>
+
+<div class="preco">
+
+<strong>
+R$ 89,90
+</strong>
+
+<a
+class="pedir"
+href="#contato">
+
+Ver produto
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="produto">
+
+<div class="foto">
+💄
+</div>
+
+<div class="conteudo">
+
+<h3>
+Kit Cuidados
+</h3>
+
+<p>
+Produtos selecionados
+para sua rotina de beleza.
+</p>
+
+<div class="preco">
+
+<strong>
+R$ 59,90
+</strong>
+
+<a
+class="pedir"
+href="#contato">
+
+Ver produto
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="produto">
+
+<div class="foto">
+💈
+</div>
+
+<div class="conteudo">
+
+<h3>
+Corte + Barba
+</h3>
+
+<p>
+Serviço completo com
+acabamento profissional.
+</p>
+
+<div class="preco">
+
+<strong>
+R$ 45,00
+</strong>
+
+<a
+class="pedir"
+href="#contato">
+
+Agendar
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="produto">
+
+<div class="foto">
+🚗
+</div>
+
+<div class="conteudo">
+
+<h3>
+Lavagem Completa
+</h3>
+
+<p>
+Limpeza externa e interna
+do veículo.
+</p>
+
+<div class="preco">
+
+<strong>
+R$ 60,00
+</strong>
+
+<a
+class="pedir"
+href="#contato">
+
+Agendar
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<section id="servicos">
+
+
+<div class="titulo">
+
+<h2>
+O que podemos criar
+</h2>
+
+<p>
+Cada projeto é personalizado para o negócio.
+</p>
+
+</div>
+
+
+<div class="servicos">
+
+
+<div class="servico">
+
+<div style="font-size:35px;">
+🛍️
+</div>
+
+<h3>
+Catálogo de produtos
+</h3>
+
+<p>
+Apresente seus produtos com fotos,
+preços, descrições e informações.
+</p>
+
+</div>
+
+
+<div class="servico">
+
+<div style="font-size:35px;">
+📲
+</div>
+
+<h3>
+WhatsApp
+</h3>
+
+<p>
+Botões para seus clientes entrarem
+em contato rapidamente.
+</p>
+
+</div>
+
+
+<div class="servico">
+
+<div style="font-size:35px;">
+📍
+</div>
+
+<h3>
+Localização
+</h3>
+
+<p>
+Mostre onde sua empresa está
+e facilite a visita dos clientes.
+</p>
+
+</div>
+
+
+<div class="servico">
+
+<div style="font-size:35px;">
+📸
+</div>
+
+<h3>
+Instagram
+</h3>
+
+<p>
+Conecte seu site às redes sociais
+da sua empresa.
+</p>
+
+</div>
+
+
+<div class="servico">
+
+<div style="font-size:35px;">
+⭐
+</div>
+
+<h3>
+Avaliações
+</h3>
+
+<p>
+Mostre depoimentos e avaliações
+dos seus clientes.
+</p>
+
+</div>
+
+
+<div class="servico">
+
+<div style="font-size:35px;">
+🎨
+</div>
+
+<h3>
+Identidade visual
+</h3>
+
+<p>
+Cores, imagens e estilo adaptados
+à identidade da sua marca.
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<section>
+
+
+<div class="titulo">
+
+<h2>
+Por que ter um site?
+</h2>
+
+</div>
+
+
+<div class="beneficios">
+
+
+<div class="beneficio">
+
+<div style="font-size:35px;">
+📱
+</div>
+
+<h3>
+Presença online
+</h3>
+
+<p>
+Sua empresa disponível
+na internet.
+</p>
+
+</div>
+
+
+<div class="beneficio">
+
+<div style="font-size:35px;">
+📲
+</div>
+
+<h3>
+Mais contatos
+</h3>
+
+<p>
+Facilite o contato
+com seus clientes.
+</p>
+
+</div>
+
+
+<div class="beneficio">
+
+<div style="font-size:35px;">
+💼
+</div>
+
+<h3>
+Profissionalismo
+</h3>
+
+<p>
+Passe mais confiança
+para seu público.
+</p>
+
+</div>
+
+
+<div class="beneficio">
+
+<div style="font-size:35px;">
+🚀
+</div>
+
+<h3>
+Sua marca
+</h3>
+
+<p>
+Tenha um espaço próprio
+para apresentar seu negócio.
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<section class="sobre">
+
+
+<div class="sobre-conteudo">
+
+<h2>
+Um site feito para o seu negócio
+</h2>
+
+<p>
+
+Este site é apenas um modelo demonstrativo.
+O projeto final é personalizado de acordo
+com cada empresa.
+
+</p>
+
+<p>
+
+Nome, cores, fotos, produtos, serviços,
+preços, WhatsApp, endereço, horários
+e redes sociais podem ser personalizados.
+
+</p>
+
+</div>
+
+</section>
+
+
+<section
+class="cta"
+id="contato">
+
+<h2>
+Gostou do modelo?
+</h2>
+
+<p>
+
+Imagine essa estrutura com a identidade
+visual, produtos e informações da sua empresa.
+
+</p>
+
+<a
+class="botao"
+href="https://wa.me/5561999999999?text=Olá!%20Vi%20o%20modelo%20do%20site%20e%20quero%20saber%20mais."
+target="_blank">
+
+QUERO MEU SITE 🚀
+
+</a>
+
+</section>
+
+
+<footer>
+
+<h3>
+Vitrine Pro
+</h3>
+
+<p>
+Modelo demonstrativo de criação de sites.
+</p>
+
+<p>
+© 2026 Vitrine Pro
+</p>
+
+</footer>
+
+
+</body>
+
+</html>
